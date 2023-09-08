@@ -1,11 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <span
-        class="text-vuet text-h5 ml-3 pt-2"
-        style="cursor: pointer"
-        @click="router.push('/')"
-      >
+      <span class="text-h5 ml-3 pt-2">
         <algo-icon color="currentColor" :width="30" />lgoPay
       </span>
       <v-spacer />
