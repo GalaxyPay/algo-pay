@@ -13,6 +13,7 @@
         @click="showSettings = true"
         icon="mdi-cog"
         :color="!addr ? 'red' : ''"
+        :disabled="listen"
       />
     </v-app-bar>
     <v-main>
