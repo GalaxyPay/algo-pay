@@ -205,13 +205,16 @@ async function setSnackbar(text, color = "info", timeout = 4000) {
 }
 
 async function lookupNfd() {
-  nfds.value = address.value
-    ? (
-        await fetchAsync(
-          `https://api.nf.domains/nfd/browse?name=${address.value}`
-        )
-      ).filter((nfd) => nfd.depositAccount)
-    : [];
+  window.clearTimeout(window.timeOutId);
+  window.timeOutId = window.setTimeout(async () => {
+    nfds.value = address.value
+      ? (
+          await fetchAsync(
+            `https://api.nf.domains/nfd/browse?name=${address.value}`
+          )
+        ).filter((nfd) => nfd.depositAccount)
+      : [];
+  }, 500);
 }
 
 async function resolveAddress(address) {
