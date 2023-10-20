@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
-    "algosdk": "^2.4.0",
+    "algosdk": "^2.7.0",
     "idb-keyval": "^6.2.1",
     "qrcode": "^1.5.3",
     "roboto-fontface": "*",
